@@ -1,0 +1,9 @@
+extends layout
+append css
+	link(rel='stylesheet', href='../public/css/login.css')
+block content
+	.jumbotron
+		h1 Welcome
+			p.lead The application needs to access your twitter account.
+			p
+				a.btn.btn-lg.btn-danger(href='/twauth', role='button') Login	    		

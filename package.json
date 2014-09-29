@@ -1,0 +1,26 @@
+{
+  "name": "tdonor",
+  "version": "1.0.0",
+  "description": "Twitter Blood Donation Application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "(https://github.com/MohamadAtieh/tdonor.git)"
+  },
+  "keywords": [
+    "twitter"
+  ],
+  "author": "Mohamad Atie",
+  "license": "m-atieh.com",
+  "dependencies": {
+    "body-parser": "^1.9.0",
+    "consolidate": "^0.10.0",
+    "express": "^4.9.5",
+    "express-mongoose": "^0.1.0",
+    "jade": "^1.7.0",
+    "mongoose": "^3.8.16"
+  }
+}

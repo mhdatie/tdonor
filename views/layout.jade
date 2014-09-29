@@ -1,0 +1,15 @@
+html5
+html
+	head
+		title= pageTitle
+		block js
+			script(src='//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
+			script(src='../bower_components/bootstrap/dist/js/bootstrap.min.js')
+		block css
+			link(rel='stylesheet', href='../bower_components/bootstrap/dist/css/bootstrap.min.css')
+	body
+		.container
+			h1 tDonor
+				img(src= "../public/images/twitter-32.png") 
+				small #TweetForBlood
+			block content
