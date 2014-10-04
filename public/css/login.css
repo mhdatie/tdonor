@@ -1,1 +1,6 @@
 .jumbotron{text-align: center;background-color: transparent;}
+.btn-danger {
+    color: #FFF;
+    background-color: #D9534F;
+    border-color: #D9534F;
+}

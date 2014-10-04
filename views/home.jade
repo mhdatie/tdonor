@@ -1,4 +1,33 @@
 extends layout
 
+append css
+	link(rel='stylesheet', href='../public/css/home.css')
+
+append js
+	script(src='/socket.io/socket.io.js')
+	script(src='../public/js/home.js')
+
+append navigation
+	nav.navbar.navbar-default.navbar-static-top(role='navigation')
+		ul.nav.navbar-nav
+			li.active
+				a(href='/') Home
+			li
+				a(href='/logout') Logout
+
 block content
-	p Welcome
+	.container
+		h3.container-header-1 Recent Tweets
+		a(href="#")#refresh
+			span.badge
+		if !(tweets && tweets.length)
+			.media No results
+		else
+			.media
+				each tweet in tweets
+					a(href='#').pull-left
+						img(src= tweet.user.profile_image_url)
+					.media-body
+						h4.media-heading= tweet.user.name 
+						a(href="http://twitter.com/#{tweet.user.screen_name}") @#{tweet.user.screen_name}
+						p= tweet.text

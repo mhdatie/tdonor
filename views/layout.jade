@@ -7,9 +7,14 @@ html
 			script(src='../bower_components/bootstrap/dist/js/bootstrap.min.js')
 		block css
 			link(rel='stylesheet', href='../bower_components/bootstrap/dist/css/bootstrap.min.css')
+			link(rel='stylesheet', href='../public/css/layout.css')
 	body
 		.container
-			h1 tDonor
-				img(src= "../public/images/twitter-32.png") 
-				small #TweetForBlood
+			block navigation
+				h1.h1-header tDonor
+					img(src= "../public/images/twitter-32.png") 
+					small #TweetForBlood
+				if(user)
+					h5.pull-right.hello-msg Hello
+						a(href="http://twitter.com/#{user.name}") #{user.name}
 			block content
