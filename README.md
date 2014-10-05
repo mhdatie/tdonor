@@ -28,5 +28,5 @@ Modules installed:
 #TODO together
   - caching tweets in redis with proper periodic updates of the Stream API and REST API.
   - Chat application with block list stored in MongoDB using mongoose.js.
-    - (extention) connect user with nearby conencted users to chat, using redis subsribe and publish
+    - (extention) connect user with nearby conencted users to chat, using ip, geoip, twitter and redis subscribe and publish.
   
