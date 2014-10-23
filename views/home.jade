@@ -17,17 +17,27 @@ append navigation
 
 block content
 	.container
-		h3.container-header-1 Recent Tweets
-		a(href="#")#refresh
-			span.badge
-		if !(tweets && tweets.length)
-			.media No results
-		else
-			.media
-				each tweet in tweets
-					a(href='#').pull-left
-						img(src= tweet.user.profile_image_url)
-					.media-body
-						h4.media-heading= tweet.user.name 
-						a(href="http://twitter.com/#{tweet.user.screen_name}") @#{tweet.user.screen_name}
-						p= tweet.text
+		.col-md-6
+			h3.container-header-1 Recent Tweets
+			a(href="#")#refresh
+				span.badge
+			if !(tweets && tweets.length)
+				.media No results
+			else
+				.media
+					each tweet in tweets
+						a(href='#').pull-left
+							img(src= tweet.user.profile_image_url)
+						.media-body
+							h4.media-heading= tweet.user.name 
+							a(href="http://twitter.com/#{tweet.user.screen_name}") @#{tweet.user.screen_name}
+							p= tweet.text
+		.col-md-6
+			h3.container-header-1 Issue a New Tweet
+			span.badge#tweetlength
+			.tweetbox
+				.input-group.input-group-md
+					span#error
+					textarea.form-control(text="#TweetForBlood")
+					p
+						button.btn.btn-danger.tweetbutton(type="button") Tweet
